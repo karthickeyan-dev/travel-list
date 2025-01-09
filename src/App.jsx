@@ -12,7 +12,8 @@ export default function App() {
   };
 
   const handleClearList = function () {
-    setItems([]);
+    const confirmed = window.confirm('Are you sure you want to 🗑️ clear list');
+    if (confirmed) setItems([]);
   };
 
   const handleToggleItem = function (id) {
